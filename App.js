@@ -1,23 +1,15 @@
 import React from 'react';
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
-
+import ColorBox from './components/ColorBox';
 const App = () => {
   return (
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.container}>
         <Text style={styles.text}>Here are some boxes of different colours:</Text>
-        <View style={[styles.box, styles.cyan]}>
-          <Text style={styles.box}>Cyan: #2aa198</Text>
-        </View>
-        <View style={[styles.box, styles.blue]}>
-          <Text style={styles.box}>Blue: #2aa198</Text>
-        </View>
-        <View style={[styles.box, styles.magenta]}>
-          <Text style={styles.box}>Magenta: #FF00FF</Text>
-        </View>
-        <View style={[styles.box, styles.orange]}>
-          <Text style={styles.box}>Orange: #FF00FF</Text>
-        </View>
+        <ColorBox colorName="Cyan" colorHex="#2aa198" />
+        <ColorBox colorName="Blue" colorHex="#268bd2" />
+        <ColorBox colorName="Magenta" colorHex="#d33682" />
+        <ColorBox colorName="Orange" colorHex="#FF00FF" />
       </View>
     </SafeAreaView>
   )
@@ -32,28 +24,6 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 10,
-    fontWeight: 'bold',
-  },
-  box: {
-    padding: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginBottom: 10,
-  },
-  cyan: {
-    backgroundColor: '#2aa198',
-  },
-  blue: {
-    backgroundColor: '#268bd2',
-  },
-  magenta: {
-    backgroundColor: '#FF00FF',
-  },
-  orange: {
-    backgroundColor: 'orange',
-  },
-  boxText: {
-    color: 'white',
     fontWeight: 'bold',
   },
 });
