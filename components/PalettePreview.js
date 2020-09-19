@@ -1,6 +1,5 @@
 import React from 'react';
 import { Text, TouchableOpacity, StyleSheet, FlatList, View } from 'react-native';
-import { color } from 'react-native-reanimated';
 
 const PalettePreview = ({ handlePress, colorPalette }) => {
     return (
@@ -15,7 +14,6 @@ const PalettePreview = ({ handlePress, colorPalette }) => {
         </TouchableOpacity>
     );
 };
-
 
 const styles = StyleSheet.create({
     text: {
